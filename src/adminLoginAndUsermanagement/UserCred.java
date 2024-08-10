@@ -7,11 +7,12 @@ public class UserCred {
 	static ArrayList<String> userTable = new ArrayList<>();
 	static ArrayList<String> passTable = new ArrayList<>();
 	static ArrayList<String> blockList = new ArrayList<>();
+	static ArrayList<String> adminBucket = new ArrayList<>();
 
 	public void addItem(String username, String password) {
-		// Check if the item already exists
+		
 		if (userTable.contains(username)) {
-			// Throw custom exception for duplicates
+		
 			throw new DuplicateEntryException("Duplicate entry found: " + username);
 		} else {
 
@@ -22,9 +23,8 @@ public class UserCred {
 	}
 
 	public void addItem1(String username, String password) {
-		// Check if the item already exists
 		if (userTable.contains(username)) {
-			// Throw custom exception for duplicates
+			
 			throw new DuplicateEntryException("Duplicate entry found: " + username);
 		} else {
 
@@ -91,7 +91,7 @@ public class UserCred {
 
 			}
 			ClearConsole.clearConsole();
-			System.out.println("\n\nUser Sucessfull Added !");
+			System.out.println("\n\nUser Sucessfully Added !");
 			
 			Lobby new1 = new Lobby();
 			new1.lobbyPage();
